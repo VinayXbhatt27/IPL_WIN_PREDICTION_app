@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ipl-win-predictor
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0 
